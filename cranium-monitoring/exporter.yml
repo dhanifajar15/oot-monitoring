@@ -3,13 +3,13 @@ version: '3'
 services:
   node-exporter:
     image: prom/node-exporter
-    container_name: oot-node-exporter
+    container_name: node-exporter
     ports:
       - 9100:9100
 
   nginx-exporter: # nginx + nginx-exporter inside
     image: etiennetremel/nginx-prometheus
-    container_name: oot-nginx-exporter
+    container_name: nginx-exporter
     ports:
       - 8080:80      # serving website
       - 9101:9101    # metrics
