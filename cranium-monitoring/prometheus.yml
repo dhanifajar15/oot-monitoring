@@ -36,5 +36,12 @@ scrape_configs:
     static_configs:
       - targets: ['10.0.0.3:9101']
 
+# BCAP
+  - job_name: 'bcap'
+    scrape_interval: 10s
+    static_configs:
+      - targets: ['108.136.255.124:9100']
+
+
 
 

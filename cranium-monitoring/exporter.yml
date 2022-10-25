@@ -6,6 +6,7 @@ services:
     container_name: node-exporter
     ports:
       - 9100:9100
+    restart: always
 
   nginx-exporter: # nginx + nginx-exporter inside
     image: etiennetremel/nginx-prometheus
@@ -13,3 +14,4 @@ services:
     ports:
       - 8080:80      # serving website
       - 9101:9101    # metrics
+    restart: always
